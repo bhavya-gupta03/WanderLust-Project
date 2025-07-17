@@ -68,8 +68,8 @@ const sessionOptions = {
     },
 };
 
-app.get("/", (req, res) => {
-    app.use("/listings", listingRoutes);
+app.get("/", async(req, res) => {
+    res.send("server is working");
 });
 
 app.use(session(sessionOptions));
